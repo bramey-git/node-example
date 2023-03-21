@@ -1,0 +1,11 @@
+{
+  "name": "playing_with_node",
+  "version": "1.0.0",
+  "description": "Node.js Examples",
+  "keywords": [],
+  "author": "Bryan Ramey",
+  "dependencies": {
+    "kado": "^4.4.0",
+    "mustache": "^4.2.0"
+  }
+}

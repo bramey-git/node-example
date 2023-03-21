@@ -1,0 +1,134 @@
+{{>header}}
+<div class="container">
+  <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal">
+    View Original Animal List
+  </button>
+  <div class="modal" id="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Animal List</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          {{#animalList}}
+          <ul>{{name}} the {{type}}, {{age}} and {{color}}</ul>
+          {{/animalList}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="text-center">Animals Sorted By Name</h4>
+      <table class="table table-sm table-striped table-bordered">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Color</th>
+          <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#byName}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{type}}</td>
+          <td>{{color}}</td>
+          <td>{{age}}</td>
+        </tr>
+        {{/byName}}
+        {{^byName}}
+        <tr>
+          <td rowspan="4"><h6> No Animal Found</h6></td>
+        </tr>
+        {{/byName}}
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <h4 class="text-center">Animals Sorted By Age</h4>
+      <table class="table table-sm table-striped table-bordered">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Color</th>
+          <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#byAge}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{type}}</td>
+          <td>{{color}}</td>
+          <td>{{age}}</td>
+        </tr>
+        {{/byAge}}
+        {{^byAge}}
+        <tr>
+          <td rowspan="4"><h6> No Animal Found</h6></td>
+        </tr>
+        {{/byAge}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="text-center">Animals Grouped By Type</h4>
+      {{#typeList}}
+        <p><b>Type: {{group}}</b></p>
+        <table class="table table-sm table-bordered table-striped-columns">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Color</th>
+            <th>Age</th>
+          </tr>
+          </thead>
+          {{#animals}}
+          <tbody>
+          <tr>
+            <td>{{name}}</td>
+            <td>{{type}}</td>
+            <td>{{color}}</td>
+            <td>{{age}}</td>
+          </tr>
+          </tbody>
+          {{/animals}}
+        </table>
+      {{/typeList}}
+    </div>
+    <div class="col-md-6">
+      <h4 class="text-center">Animals Grouped By Color</h4>
+      {{#colorList}}
+        <p><b>Color: {{group}}</b></p>
+        <table class="table table-sm table-bordered table-striped-columns">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Color</th>
+            <th>Age</th>
+          </tr>
+          </thead>
+          {{#animals}}
+          <tbody>
+          <tr>
+            <td>{{name}}</td>
+            <td>{{type}}</td>
+            <td>{{color}}</td>
+            <td>{{age}}</td>
+          </tr>
+          </tbody>
+          {{/animals}}
+        </table>
+      {{/colorList}}
+    </div>
+  </div>
+</div>
+{{>footer}}
