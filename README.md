@@ -1,5 +1,5 @@
 # node-example
-Node.JS Example Code
+Node.js Example Code
 
 Sorts, Orders and Groups an Array of Animal Objects
 
