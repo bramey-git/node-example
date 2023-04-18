@@ -1,8 +1,8 @@
 # node-example
 Node.JS Example Code
 
-Sorts and Groups and Array of Animal Objects and displays tables of each new list
+Sorts, Orders and Groups an Array of Animal Objects
 
-![example-index](https://user-images.githubusercontent.com/128429654/226499191-68568d18-d9d9-4efd-8cb5-289346d73422.png)
+![update-home](https://user-images.githubusercontent.com/128429654/232640323-f99f9c37-1417-4d5f-b757-518c270ce967.png)
 
-![example-index-list](https://user-images.githubusercontent.com/128429654/226499209-66fe0a37-e839-4795-be9c-11944a454d3c.png)
+![update-home2](https://user-images.githubusercontent.com/128429654/232640341-27db0786-5c2d-4dea-94ee-7d008d8a0f40.png)
