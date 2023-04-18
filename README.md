@@ -1,8 +1,8 @@
 # node-example
 Node.js Example Code
 
-Sorts, Orders and Groups an Array of Animal Objects
+Sorts, Orders and Groups an Array of Animal Objects dynamically by a given action and property such as sort by age or group by color.
 
-![update-home](https://user-images.githubusercontent.com/128429654/232640323-f99f9c37-1417-4d5f-b757-518c270ce967.png)
+![index-sort](https://user-images.githubusercontent.com/128429654/232924156-b07d7747-b4ce-4c6b-865b-96152c91752f.png)
 
-![update-home2](https://user-images.githubusercontent.com/128429654/232640341-27db0786-5c2d-4dea-94ee-7d008d8a0f40.png)
+![index-group](https://user-images.githubusercontent.com/128429654/232924184-83e0db5a-b3d1-474d-9b0d-7804adb48523.png)
