@@ -1,0 +1,16 @@
+body {
+  background-color: #1b1c1e;
+  color: white;
+}
+
+.navbar {
+  background-color: #71747a;
+}
+
+.tile {
+  background-color: #284276;
+}
+
+.dark {
+  color: #caccd0
+}

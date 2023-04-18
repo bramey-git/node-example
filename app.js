@@ -1,6 +1,7 @@
 'use strict'
 const Application = require('kado')
 const fs = require('kado/lib/FileSystem')
+const HyperText = require('kado/lib/HyperText')
 
 const pkg = require('./package')
 const cfg = require('./config')
@@ -14,6 +15,8 @@ app.http.addEngine('http', http.createServer(app.router))
 const viewFolder = fs.path.join(__dirname, 'views')
 app.view.addEngine('mustache', new Application.View.ViewMustache(viewFolder))
 app.view.activateEngine('mustache')
+const staticRoot = fs.path.join(__dirname, 'public')
+app.use(HyperText.StaticServer.getMiddleware(staticRoot))
 
 app.get('/', async (req, res) => {
   const animalList = Array.from(cfg.animalList)
@@ -29,6 +32,15 @@ app.get('/', async (req, res) => {
     byName: byName,
     typeList: typeList,
     colorList: colorList
+  })
+})
+
+app.post('/update', async (req, res) => {
+  const data = req.data
+  console.log('Data: ', data)
+  res.send({
+    status: 'success',
+    animalList: ''
   })
 })
 
