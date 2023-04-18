@@ -1,27 +1,22 @@
 {{>header}}
 <div class="container">
-  <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal">
-    View Original Animal List
-  </button>
-  <div class="modal" id="modal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Animal List</h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          {{#animalList}}
-          <ul>{{name}} the {{type}}, {{age}} and {{color}}</ul>
-          {{/animalList}}
+  <div class="row mt-2">
+    {{#animalList}}
+      <div class="col-md-3 mb-3">
+        <div class="card">
+          <div class="card-body tile rounded-3 text-center bg-gradient">
+            <img src="{{img}}" width="48" height="48" class="rounded-circle flex-shrink-0">
+            <h5 class="card-title"> {{name}} the {{type}}</h5>
+            <p class="card-text">Color: {{color}}, Age: {{age}}</p>
+          </div>
         </div>
       </div>
-    </div>
+    {{/animalList}}
   </div>
   <div class="row">
     <div class="col-md-6">
-      <h4 class="text-center">Animals Sorted By Name</h4>
-      <table class="table table-sm table-striped table-bordered">
+      <h4 class="dark text-center">Animals Sorted By Name</h4>
+      <table class="table table-sm table-dark table-striped table-bordered">
         <thead>
         <tr>
           <th>Name</th>
@@ -48,8 +43,8 @@
       </table>
     </div>
     <div class="col-md-6">
-      <h4 class="text-center">Animals Sorted By Age</h4>
-      <table class="table table-sm table-striped table-bordered">
+      <h4 class="dark text-center">Animals Sorted By Age</h4>
+      <table class="table table-sm table-dark table-striped table-bordered">
         <thead>
         <tr>
           <th>Name</th>
@@ -78,10 +73,10 @@
   </div>
   <div class="row">
     <div class="col-md-6">
-      <h4 class="text-center">Animals Grouped By Type</h4>
+      <h4 class="dark text-center">Animals Grouped By Type</h4>
       {{#typeList}}
         <p><b>Type: {{group}}</b></p>
-        <table class="table table-sm table-bordered table-striped-columns">
+        <table class="table table-sm table-dark table-bordered table-striped-columns">
           <thead>
           <tr>
             <th>Name</th>
@@ -104,10 +99,10 @@
       {{/typeList}}
     </div>
     <div class="col-md-6">
-      <h4 class="text-center">Animals Grouped By Color</h4>
+      <h4 class="dark text-center">Animals Grouped By Color</h4>
       {{#colorList}}
         <p><b>Color: {{group}}</b></p>
-        <table class="table table-sm table-bordered table-striped-columns">
+        <table class="table table-sm table-dark table-bordered table-striped-columns">
           <thead>
           <tr>
             <th>Name</th>
