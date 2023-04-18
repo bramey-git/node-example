@@ -4,7 +4,38 @@ body {
 }
 
 .navbar {
-  background-color: #71747a;
+  background-color: #838485;
+}
+
+.navbar.buttons {
+  background-color: #3b3c3e;
+}
+
+.btn-outline-nav {
+  border: 1px solid #c66b27;
+  color: #da6813
+}
+
+.btn-outline-nav:hover,
+.btn-outline-nav:active,
+.btn-outline-nav:focus {
+  background-color: #c66b27 !important;
+  color: #1b1c1e !important;
+  border: 0 !important;
+}
+
+/*
+.dropdown-toggle::after {
+  display: none;
+}
+*/
+
+.dropdown-menu {
+  background-color: #ababac;
+}
+
+.dropdown-menu button{
+  color: #284276;
 }
 
 .tile {

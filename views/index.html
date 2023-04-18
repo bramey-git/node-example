@@ -1,11 +1,12 @@
 {{>header}}
+{{>buttons}}
 <div class="container">
-  <div class="row mt-2">
+  <div class="row mt-3" id="animal-cards">
     {{#animalList}}
       <div class="col-md-3 mb-3">
         <div class="card">
           <div class="card-body tile rounded-3 text-center bg-gradient">
-            <img src="{{img}}" width="48" height="48" class="rounded-circle flex-shrink-0">
+            <img src="{{img}}" width="64" height="64" class="rounded-circle flex-shrink-0">
             <h5 class="card-title"> {{name}} the {{type}}</h5>
             <p class="card-text">Color: {{color}}, Age: {{age}}</p>
           </div>
