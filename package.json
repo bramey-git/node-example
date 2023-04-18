@@ -5,6 +5,7 @@
   "keywords": [],
   "author": "Bryan Ramey",
   "dependencies": {
+    "jquery": "^3.6.4",
     "kado": "^4.4.0",
     "mustache": "^4.2.0"
   }

@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"jquery@^3.6.4":
+  "integrity" "sha512-v28EW9DWDFpzcD9O5iyJXg3R3+q+mET5JhnjJzQUZMHOv67bpSIHq81GEYpPNZHG+XXHsfSme3nxp/hndKEcsQ=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.4.tgz"
+  "version" "3.6.4"
+
 "kado@^4.4.0":
   "integrity" "sha512-rBwLKLjwWb+NS3P4reuSivCjNvBunHuFAZ354j1lcpUc4uX9YR+TH+JQECj1ZgdgjmRl3Z52QZLSwC18ZVT5fg=="
   "resolved" "https://registry.npmjs.org/kado/-/kado-4.4.0.tgz"

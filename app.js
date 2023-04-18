@@ -36,12 +36,27 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/update', async (req, res) => {
-  const data = req.data
-  console.log('Data: ', data)
-  res.send({
-    status: 'success',
-    animalList: ''
-  })
+  try {
+    let animalList = null
+    const data = req.body
+    if(data.action === 'sort') {
+      animalList = Array.from(await sortBy(cfg.animalList, data.property))
+    } else if (data.action === 'group') {
+      animalList = await groupBy(cfg.animalList, data.property)
+      animalList = normalize(animalList)
+    } else {
+      new Error('Action not selected')
+    }
+    res.json({
+      success: true,
+      status: 'ok',
+      display: data.action,
+      animalList: animalList
+    })
+  } catch (err) {
+    console.log(err)
+    res.render('error', { error: err.message })
+  }
 })
 
 const groupBy = function(animals, key) {
