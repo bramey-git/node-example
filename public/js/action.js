@@ -22,9 +22,10 @@ function processData (data) {
     success: function (res) {
       if (res.status === 'ok') {
         cards.empty()
+        cards.append('<h3 class="text-center">Animals ' + res.display + 'ed by '+ data.property +' </b></h3>')
         if(res.display === 'group') {
           res.animalList.forEach((row) => {
-            cards.append('<p><b>Group: ' + row.group + ' </b></p>')
+            cards.append('<p><b>'+ data.property.toUpperCase() +': ' + row.group + ' </b></p>')
             row.animals.forEach((animal) => {
               cards.append(
                 '<div class="col-md-3 mb-3">' +
