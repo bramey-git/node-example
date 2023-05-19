@@ -1,12 +1,57 @@
 # node-example
-Node.js Example Code
 
-Sorts, Orders and Groups an Array of Animal Objects dynamically by a given action and property such as sort by age or group by color.
+## Node.js Example Code
 
-Using Node.js, HTML, CSS, JavaScript, jQuery and Mustache.js
+Sorts, Searches and Groups an array of Animal objects dynamically.
 
-![index-sort](https://user-images.githubusercontent.com/128429654/232924156-b07d7747-b4ce-4c6b-865b-96152c91752f.png)
+## Installation
 
-![sorted-by-index](https://user-images.githubusercontent.com/128429654/233455321-172c124c-a131-42a3-9dc2-9aad2b321d4a.png)
+- Clone/Copy this repository to a Node.js environment
+- run ```npm install```
+- run ```node app```
+- visit ```http://localhost:3000/```
 
-![grouped-by-index](https://user-images.githubusercontent.com/128429654/233455357-73a2cae5-1800-4e9d-b94c-cfc359d2ec21.png)
+## Page
+
+The home page at ```http://localhost:3000/``` should now appear as
+
+![Example Home](./public/images/example_home.png)
+
+Using the search bar will automatically return tiles matching the search term.
+The search searches all fields in an animal object for a match.
+Example: Searching 'do' will display "Donnie the Turtle" as well as all dog entries.
+
+![Example Search](./public/images/example_search.png)
+
+Using the Sort By buttons in the nav bar dropdown will sort all animals by the
+selected quality.
+
+![Example Sort](./public/images/example_sorted.png)
+
+Using the Group By buttons in the nav bar dropdown will group and display all
+animals by the selected quality.
+
+![Example Group](./public/images/example_grouped.png)
+
+Animals Example:
+
+```
+[
+  {
+    'type': 'Bird',
+    'name': 'Flight',
+    'color': 'purple',
+    'age': 2,
+    'img': 'image url'
+  },
+  {
+    'type': 'Cat', 
+    'name': 'Bud',
+    'color': 'brown',
+    'age': 7,
+    'img': 'image url'
+  },
+]
+```
+
+~ B Ramey
