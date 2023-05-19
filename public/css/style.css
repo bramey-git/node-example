@@ -11,17 +11,25 @@ body {
   background-color: #3b3c3e;
 }
 
-.btn-outline-nav {
-  border: 1px solid #c66b27;
-  color: #da6813
+.form-inputs {
+  position:relative;
+  width: 35%;
 }
 
-.btn-outline-nav:hover,
-.btn-outline-nav:active,
-.btn-outline-nav:focus {
-  background-color: #c66b27 !important;
-  color: #1b1c1e !important;
-  border: 0 !important;
+.form-inputs .form-control:focus {
+  box-shadow:none;
+  border:1px solid #000;
+}
+
+.form-inputs i {
+  color: #3b3c3e;
+  position:absolute;
+  right:10px;
+  top:10px;
+}
+
+.btn-nav:hover {
+  border: 1px solid #caccd0;
 }
 
 /*
